@@ -1,2 +1,483 @@
-# maa-brahmani-balloon-decoration
-Maa Brahmani ballon decoration website
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>માં બ્રહ્માણી બલૂન ડેકોરેશન</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Gujarati", sans-serif;
+  background: #fffaf5;
+  color: #172c50;
+  line-height: 1.8;
+}
+
+header {
+  background: #092b50 ;
+  color: white;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #ffda63;
+}
+
+header p {
+  font-size: 13px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffda63;
+}
+
+.hero {
+  min-height: 430px;
+  padding: 65px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #fff5d9 0%, #fff5d9e8 48%, #ffffff20 100%),
+    url("1028298527399699877.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.4;
+  color: #e91e63;
+}
+
+.hero h2 {
+  font-size: 25px;
+  color: #092b50;
+  margin: 10px 0;
+}
+
+.hero p {
+  margin: 15px 0 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  background: #e91e63;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 5px 5px 5px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #bd1550;
+}
+
+.btn-blue {
+  background: #092b50;
+}
+
+section {
+  padding: 55px 7%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 31px;
+  margin-bottom: 30px;
+  color: #092b50;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-top: -22px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px 18px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 5px 20px #092b5012;
+  border-bottom: 4px solid #ffbf45;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card .emoji {
+  font-size: 43px;
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  color: #e91e63;
+}
+
+.gallery {
+  background: #eaf6ff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px #00000015;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.025);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.about-card {
+  padding: 28px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px #00000010;
+}
+
+.about-card h2 {
+  color: #e91e63;
+  margin-bottom: 12px;
+}
+
+.contact {
+  background: #effaf1;
+  text-align: center;
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+footer {
+  background: #092b50;
+  color: white;
+  text-align: center;
+  padding: 22px 10px;
+}
+
+footer span {
+  color: #ffda63;
+}
+
+@media (max-width: 650px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .hero {
+    padding: 45px 6%;
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    background: #fff5d9dd;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <div class="logo">🙏 માં બ્રહ્માણી 🔱</div>
+    <p>🎉બલૂન ડેકોરેશન🎊</p>
+  </div>
+
+  <nav>
+    <a href="#home">હોમ</a>
+    <a href="#services">સેવાઓ</a>
+    <a href="#gallery">ગેલેરી</a>
+    <a href="#about">અમારા વિશે</a>
+    <a href="#contact">સંપર્ક</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p>તમારા દરેક પ્રસંગને બનાવીએ યાદગાર!</p>
+
+    <h1>મા બ્રહ્માણી<br>બલૂન ડેકોરેશન</h1>
+
+    <h2>સંચાલક: લકુમ મોહિત</h2>
+
+    <p>
+      જન્મદિવસ, લગ્ન, સગાઈ, નામકરણ, ગૃહપ્રવેશ
+      અને દરેક ખુશીના પ્રસંગ માટે સુંદર ડેકોરેશન.
+    </p>
+
+    <a class="btn" href="#services">અમારી સેવાઓ જુઓ</a>
+    <a class="btn btn-blue" href="#booking">બુકિંગ કરો</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">🎉 અમારી ખાસ સેવાઓ</h2>
+  <p class="section-subtitle">દરેક પ્રસંગ માટે કંઈક ખાસ!</p>
+
+  <div class="services">
+
+    <div class="service-card">
+      <div class="emoji">🎂</div>
+      <h3>બર્થડે ડેકોરેશન</h3>
+      <p>બલૂન આર્ચ, બર્થડે બેકડ્રોપ અને સુંદર પાર્ટી સજાવટ.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="emoji">💍</div>
+      <h3>લગ્ન અને સગાઈ</h3>
+      <p>તમારા ખાસ દિવસ માટે આકર્ષક અને યાદગાર સજાવટ.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="emoji">👶</div>
+      <h3>બેબી શાવર</h3>
+      <p>નામકરણ અને બાળકના સ્વાગત માટે સુંદર થીમ ડેકોરેશન.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="emoji">🏠</div>
+      <h3>ગૃહપ્રવેશ</h3>
+      <p>નવા ઘરના શુભ પ્રસંગ માટે બલૂન અને પ્રવેશદ્વારની સજાવટ.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="emoji">🏢</div>
+      <h3>અન્ય પ્રસંગો</h3>
+      <p>દુકાનનું ઉદ્ઘાટન, વર્ષગાંઠ અને અન્ય ખાસ કાર્યક્રમો.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2 class="section-title">📸 અમારા કામની ગેલેરી</h2>
+  <p class="section-subtitle">તમારા સપનાના ડેકોરેશન માટે નવા વિચારો.</p>
+
+  <div class="gallery-grid">
+    <img
+      src="Our balloon garland installation sitting pretty….jpg"
+      alt="બર્થડે પાર્ટી ડેકોરેશન">
+
+    <img
+      src="719872321722252302.jpg"
+      alt="લગ્ન પ્રસંગની સજાવટ">
+
+    <img
+      src="54817320460421103.jpg"
+      alt="રંગીન પાર્ટી ડેકોરેશન">
+
+    <img
+      src="Ballonboog 6m Anytime Fitness Capelle aan den IJssel.jpg"
+      alt="સમારંભની સજાવટ">
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+
+    <div class="about-card">
+      <h2>🎈 અમારા વિશે</h2>
+      <p>
+        મા બ્રહ્માણી બલૂન ડેકોરેશનમાં તમારો દરેક પ્રસંગ
+        ખાસ અને યાદગાર બને તે અમારો પ્રયત્ન છે.
+        તમારી પસંદગી અને પ્રસંગ પ્રમાણે ડેકોરેશનની
+        ડિઝાઇન નક્કી કરી શકાય છે.
+      </p>
+      <p style="margin-top:15px;">
+        <strong>સંચાલક:</strong> લકુમ મોહિત
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>✨ અમને શા માટે પસંદ કરો?</h2>
+      <p>✅ આકર્ષક ડેકોરેશન ડિઝાઇન</p>
+      <p>✅ તમારી પસંદગી પ્રમાણે થીમ</p>
+      <p>✅ અલગ-અલગ પ્રસંગો માટે સજાવટ</p>
+      <p>✅ બુકિંગ પહેલાં ભાવની ચર્ચા</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">📞 સંપર્ક કરો અને બુકિંગ કરો</h2>
+
+  <p><strong>સંચાલકનું નામ:</strong> લકુમ મોહિત</p>
+  <p><strong>મોબાઇલ નંબર:</strong> 9726216965</p>
+  <p><strong>સરનામું:</strong> મોટી નહેર , દેવા વાંટા</p>
+  <p style="margin-top:18px;">
+    તમારો પ્રસંગ જણાવો અને તમારા ડેકોરેશનની ચર્ચા કરો!
+  </p>
+</section>
+</main>
+<section id="booking" style="padding:30px; background:#fff5f8;">
+  <h2 style="text-align:center; color:#e91e63;">
+    🎈 બુકિંગ ફોર્મ
+  </h2>
+
+  <form id="bookingForm"
+        style="max-width:450px; margin:auto;">
+
+    <label>તમારું નામ:</label>
+    <input type="text" id="customerName"
+           placeholder="તમારું નામ લખો" required
+           style="width:100%; padding:12px; margin:8px 0 15px;">
+
+    <label>પ્રસંગ પસંદ કરો:</label>
+    <select id="eventType" required
+            style="width:100%; padding:12px; margin:8px 0 15px;">
+      <option value="">પ્રસંગ પસંદ કરો</option>
+      <option>બર્થડે ડેકોરેશન</option>
+      <option>લગ્ન / સગાઈ</option>
+      <option>બેબી શાવર / નામકરણ</option>
+      <option>ગૃહપ્રવેશ</option>
+      <option>અન્ય પ્રસંગ</option>
+    </select>
+
+    <label>પ્રસંગની તારીખ:</label>
+    <input type="date" id="eventDate" required
+           style="width:100%; padding:12px; margin:8px 0 15px;">
+
+    <label>તમારું બજેટ:</label>
+    <select id="budget" required
+            style="width:100%; padding:12px; margin:8px 0 15px;">
+      <option value="">બજેટ પસંદ કરો</option>
+      <option>₹1,000 સુધી</option>
+      <option>₹1,000 થી ₹3,000</option>
+      <option>₹3,000 થી ₹5,000</option>
+      <option>₹5,000 થી વધુ</option>
+    </select>
+
+    <label>મોબાઇલ નંબર:</label>
+    <input type="tel" id="customerPhone"
+           placeholder="10 અંકનો નંબર" required
+           pattern="[0-9]{10}" maxlength="10"
+           style="width:100%; padding:12px; margin:8px 0 20px;">
+
+    <button type="submit"
+            style="width:100%; padding:14px; background:#e91e63;
+            color:white; border:0; border-radius:10px;
+            font-size:17px; cursor:pointer;">
+      બુકિંગની વિગતો તપાસો
+    </button>
+
+  </form>
+</section>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const eventType = document.getElementById("eventType").value;
+  const date = document.getElementById("eventDate").value;
+  const budget = document.getElementById("budget").value;
+  const phone = document.getElementById("customerPhone").value;
+
+  if (!name || !eventType || !date || !budget || !phone) {
+    alert("કૃપા કરીને બધી માહિતી ભરો.");
+    return;
+  }
+
+  const message =
+  "🎈 મા બ્રહ્માણી બલૂન ડેકોરેશન - બુકિંગ વિનંતી\n\n" +
+  "ગ્રાહકનું નામ: " + name + "\n" +
+  "પ્રસંગ: " + eventType + "\n" +
+  "તારીખ: " + date + "\n" +
+  "બજેટ: " + budget + "\n" +
+  "મોબાઇલ નંબર: " + phone;
+
+const shopNumber = "919726216965";
+
+const whatsappURL =
+  "https://wa.me/" + shopNumber +
+  "?text=" + encodeURIComponent(message);
+
+window.open(whatsappURL, "_blank");
+});
+</script>
+<footer>
+  <p>© 2026 <span>મા બ્રહ્માણી બલૂન ડેકોરેશન</span></p>
+  <p>સંચાલક: લકુમ મોહિત | જય માતાજી 🙏</p>
+</footer>
+</body>
+</html>
